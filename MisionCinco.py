@@ -133,7 +133,7 @@ def calcularPiramide():
     for x in range (1, 10, 1):       #Rango de 9. (1, 2, 3... 9)
         c = (c * 10) + 1
         d = (d * 10) + 1
-        e = b * d
+        e = c * d
         print (c, "*", d,"=", e)
     
 
