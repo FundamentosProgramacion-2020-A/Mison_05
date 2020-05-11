@@ -9,6 +9,8 @@ import turtle
 
 #Defines la función de los cuadros y los círculos
 def dibujarCuadrosCirculos (imagen):
+    
+    imagen = Image.new ("RGB", (600, 600), "white")
     canvas = ImageDraw.Draw(imagen)
     a = 600
     for x in range (0,301,10):
@@ -20,10 +22,10 @@ def dibujarCuadrosCirculos (imagen):
         
     imagen.show()
     
-    
 #Defines la función de la estrella
 def dibujarEstrella (imagen):
     
+    imagen = Image.new ("RGB", (600, 600), "white")
     canvas = ImageDraw.Draw(imagen)
     
     for y in range(0, 301, 10):  #[0,10,20...300]
@@ -68,6 +70,7 @@ def dibujarEstrella (imagen):
 #Defines la función del espiral     
 def dibujarEspiral (imagen):
     
+    imagen = Image.new ("RGB", (600, 600), "white")
     canvas = ImageDraw.Draw(imagen)
     
     x = turtle.xcor ()
@@ -89,6 +92,7 @@ def dibujarEspiral (imagen):
 #Defines la función dibujar Red
 def dibujarRed (imagen):
     
+    imagen = Image.new ("RGB", (600, 600), "white")
     canvas = ImageDraw.Draw(imagen)
     
     for y in range (-600, 901, 20):
@@ -124,13 +128,16 @@ def imprimirPiramides ():
         
 #Defines la función  de calcular los números divisibles entre 17
 def calcularDivisibles ():
+    x = 0
     
     for i in range (1000,10000):
         numero = i % 17
        
         if numero == 0:
-            print ("El", i, "es divisible entre 17")
+            x = x + 1
         
+    print (x, "números se pueden dividir entre 17")
+    
         
 #Defines la función para hacer el menú       
 def menu ():
